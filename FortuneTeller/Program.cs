@@ -48,7 +48,7 @@ namespace FortuneTeller
                 Console.WriteLine("\n" + "March birthday? I love that month! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
                 string help = Console.ReadLine();
                 Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-                Console.ReadLine();
+                Console.ReadLine(); 
             }
             else if (birthMonth == 4)
             {
@@ -118,36 +118,42 @@ namespace FortuneTeller
             int numOfSiblings = int.Parse(Console.ReadLine());
 
             Console.WriteLine("\n" + "Based on the information you have given me i will now calculate your future.....Please press enter to see your fortune!");
-            Console.ReadLine();
+            
 
             string vacationHome = Console.ReadLine();
             if(numOfSiblings == 0)
             {
-                Console.WriteLine("Jamaca");
+                Convert.ToString(vacationHome = "Jamaca");
             }
             if (numOfSiblings == 1)
             {
-                Console.WriteLine("France");
+                Convert.ToString(vacationHome = "France");
             }
             if(numOfSiblings == 2)
             {
-                Console.WriteLine("Italy");
+                Convert.ToString(vacationHome = "Italy");
             }
             if(numOfSiblings == 3)
             {
-                Console.WriteLine("Africa");
+                Convert.ToString(vacationHome = "Africa");
             }
             if(numOfSiblings >= 3)
             {
-                Console.WriteLine("Mexico");
+                Convert.ToString(vacationHome = "Mexico");
             }
                if(numOfSiblings <= 0)
             {
-                Console.WriteLine("Ohio");
+                Convert.ToString(vacationHome = "Ohio");
             }
-            Console.WriteLine(firstName + lastName + "Will have a vacation home in" + vacationHome);           
+            Console.WriteLine(firstName + " " + lastName + " " + "will have a vacation home in" + " " + vacationHome);           
 
-           
+           // know how to get user input
+           // do not know how to combine variables for final statement
+           // on the right track just could use a little help especially with cleaning up code
+           // have lots of questions...
+
+
+
             
 
             
