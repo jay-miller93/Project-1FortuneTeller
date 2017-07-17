@@ -9,159 +9,141 @@ namespace FortuneTeller
     class Program
     {
         static void Main(string[] args)
-
         {
-            // Ask user for input
 
-            Console.WriteLine("Hello and welcome to Fortune Teller 6.0! Press the enter key to continue!");
-            Console.ReadLine();
-
-
-            Console.WriteLine("Please start by entering your first name:");
+            Console.WriteLine("Welcome to Fortune Teller 6.0! please start by entering your first name:");
             string firstName = Console.ReadLine();
 
-            Console.WriteLine("\n" + firstName + "? That is a nice name! Do you have a last name?");
+            Console.WriteLine("Thats an interesting name! Please enter your last name:");
             string lastName = Console.ReadLine();
 
-            Console.WriteLine("\n" + "Well, " + firstName + " " + lastName + ", I am going to read you your fortune, but first i will need to  know just a little bit more about you. How old are you?");
-            int yourAge = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter your age:");
+            int age = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("\n" + "Wow you dont look that old! Please enter the number of the month you were born  in:");
-            int birthMonth = int.Parse(Console.ReadLine());
-
-
-            if (birthMonth == 1)
-
+            Console.WriteLine("Please enter the number of month in which you were born:");
+            string birth = Console.ReadLine();
+            string color;
+            while (true)
             {
-                Console.WriteLine("\n" + "January huh? Where im from its really cold that time of year! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\"):");
-                string yourColor = Console.ReadLine();
+                Console.WriteLine("What is your favorite ROYGBIV color?. Please enter help for ROYGBIV colors");  //for some reason escape characters arnt working
+                color = Console.ReadLine();
 
-                if (yourColor.ToLower() == "help")
+                if (color.ToLower() == "help")
                 {
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-                    yourColor = Console.ReadLine();
+
+                    Console.WriteLine("ROYGBIV = Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
+                }
+                else if (color.ToLower() == "red")
+                {
+                    break;
+                }
+                else if (color.ToLower() == "orange")
+                {
+                    break;
+                }
+                else if (color.ToLower() == "yellow")
+                {
+                    break;
+                }
+                else if (color.ToLower() == "green")
+                {
+                    break;
+                }
+                else if (color.ToLower() == "blue")
+                {
+                    break;
+                }
+                else if (color.ToLower() == "indigo")
+                {
+                    break;
+                }
+                else if (color.ToLower() == "violet")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Not a color!");
 
                 }
 
-                else if (birthMonth == 2)
-                {
-                    Console.WriteLine("\n" + "February? I dont meet very many people with that birthday month! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 3)
-                {
-                    Console.WriteLine("\n" + "March birthday? I love that month! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-                }
-
-                else if (birthMonth == 4)
-                {
-                    Console.WriteLine("\n" + "April! Thats when i was born! Now please tell me your favorite ROYGBIV(for      ROYGBIV color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 5)
-                {
-                    Console.WriteLine("\n" + "I love May. That means summer is around the corner! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 6)
-                {
-                    Console.WriteLine("\n" + "June! What a great month! Now please tell me your favorite ROYGBIV(for ROYGBIV   color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 7)
-                {
-                    Console.WriteLine("\n" + "July? One of my favorite holidays is in that month! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 8)
-                {
-                    Console.WriteLine("\n" + "I have a son born in August! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 9)
-                {
-                    Console.WriteLine("\n" + "September? Thats interesting! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 10)
-                {
-                    Console.WriteLine("\n" + "October? I love halloween! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 11)
-                {
-                    Console.WriteLine("\n" + "November! I love thanksgiving! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet.");
-
-                }
-                else if (birthMonth == 12)
-                {
-                    Console.WriteLine("\n" + "December baby? Thats usually when the snow starts falling here! Now please tell me your favorite ROYGBIV(for ROYGBIV color options type \"help\") color to continue:");
-
-
-
-
-                    Console.WriteLine("\n" + "Thats a great color! One last question...How many siblings do you have?");
-                    int numOfSiblings = int.Parse(Console.ReadLine());
-
-                    Console.WriteLine("\n" + "Based on the information you have given me i will now calculate your future.....Please press enter to see your fortune!");
-
-
-                    string vacationHome = Console.ReadLine();
-                    if (numOfSiblings == 0)
-                    {
-                        Convert.ToString(vacationHome = "Jamaca");
-                    }
-                    if (numOfSiblings == 1)
-                    {
-                        Convert.ToString(vacationHome = "France");
-                    }
-                    if (numOfSiblings == 2)
-                    {
-                        Convert.ToString(vacationHome = "Italy");
-                    }
-                    if (numOfSiblings == 3)
-                    {
-                        Convert.ToString(vacationHome = "Africa");
-                    }
-                    if (numOfSiblings >= 3)
-                    {
-                        Convert.ToString(vacationHome = "Mexico");
-                    }
-                    if (numOfSiblings <= 0)
-                    {
-                        Convert.ToString(vacationHome = "Ohio");
-                    }
-                    Console.WriteLine(firstName + " " + lastName + " " + "will have a vacation home in" + " " + vacationHome);
-                }
             }
 
+            Console.WriteLine("How many siblings do you have?");
+            int siblings = int.Parse(Console.ReadLine());
 
 
+            Random rand = new Random();
+            int retireYear, moneyInBank;
 
-
-
+            string location;
+            if (age % 2 == 0)
+            {
+                retireYear = rand.Next(10, 20);
             }
+            else
+            {
+                retireYear = rand.Next(20, 30);
+            }
+            if (siblings == 0)
+            {
+                location = "Ohio";
+            }
+            else if (siblings == 1)
+            {
+                location = "Hawii";
+            }
+            else if (siblings == 2)
+            {
+                location = "The Bahamas";
+            }
+            else if (siblings == 3)
+            {
+                location = "Jamaca";
+            }
+            else
+            {
+                location = "Puerto Rico";
+            }
+            string transportation;
+            if (color.ToLower() == "red" || color.ToLower() == "violet")
+            {
+                transportation = "Corvette";
+            }
+            else if (color.ToLower() == "orange" || color.ToLower() == "indigo")
+            {
+                transportation = "Honda Civic";
+            }
+            else if (color.ToLower() == "blue" || color.ToLower() == "yellow")
+            {
+                transportation = "Viper";
+            }
+            else
+            {
+                transportation = "Lambo";
+            }
+
+            if ((firstName.ToLower().Contains(birth[0])) || (lastName.ToLower().Contains(birth[0])))
+            {
+                moneyInBank = rand.Next(10000, 20000);
+            }
+            else if (firstName.ToLower().Contains(birth[1]) || lastName.ToLower().Contains(birth[1]))
+            {
+                moneyInBank = rand.Next(15000, 25000);
+            }
+            else if (firstName.ToLower().Contains(birth[2]) || lastName.ToLower().Contains(birth[2]))
+            {
+                moneyInBank = rand.Next(25000, 35000);
+            }
+            else
+            {
+                moneyInBank = rand.Next(50000, 70000);
+            }
+
+            Console.WriteLine(firstName + " " + lastName + " will retire in " + retireYear + " of years with $" + moneyInBank + " in the bank, a vacation home in " + location + " and a " + transportation);
+
+
 
         }
     }
+}
