@@ -21,11 +21,12 @@ namespace FortuneTeller
             int age = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Please enter the number of month in which you were born:");
-            string birth = Console.ReadLine();
+            int birth = int.Parse(Console.ReadLine());
             string color;
+
             while (true)
             {
-                Console.WriteLine("What is your favorite ROYGBIV color?. Please enter help for ROYGBIV colors");  //for some reason escape characters arnt working
+                Console.WriteLine("What is your favorite ROYGBIV color?. Please enter \"help\" for ROYGBIV colors"); 
                 color = Console.ReadLine();
 
                 if (color.ToLower() == "help")
@@ -77,6 +78,7 @@ namespace FortuneTeller
             int retireYear, moneyInBank;
 
             string location;
+
             if (age % 2 == 0)
             {
                 retireYear = rand.Next(10, 20);
@@ -106,6 +108,7 @@ namespace FortuneTeller
                 location = "Puerto Rico";
             }
             string transportation;
+
             if (color.ToLower() == "red" || color.ToLower() == "violet")
             {
                 transportation = "Corvette";
@@ -122,16 +125,17 @@ namespace FortuneTeller
             {
                 transportation = "Lambo";
             }
+            
 
-            if ((firstName.ToLower().Contains(birth[0])) || (lastName.ToLower().Contains(birth[0])))
+            if (birth == 1 || birth == 2)
             {
                 moneyInBank = rand.Next(10000, 20000);
             }
-            else if (firstName.ToLower().Contains(birth[1]) || lastName.ToLower().Contains(birth[1]))
+            else if (birth == 3|| birth == 4)
             {
                 moneyInBank = rand.Next(15000, 25000);
             }
-            else if (firstName.ToLower().Contains(birth[2]) || lastName.ToLower().Contains(birth[2]))
+            else if (birth == 5 || birth == 6)
             {
                 moneyInBank = rand.Next(25000, 35000);
             }
